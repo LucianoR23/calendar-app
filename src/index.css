@@ -38,3 +38,19 @@
     outline: none;
     padding: 10px;
 }
+
+.fab {
+    border-radius: 100%;
+    bottom: 1.5rem;
+    padding: 1rem;
+    position: fixed;
+    right: 1.5rem;
+}
+.fab-danger {
+    border-radius: 100%;
+    bottom: 1.5rem;
+    position: fixed;
+    left: 1.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+}
