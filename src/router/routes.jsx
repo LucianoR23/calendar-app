@@ -1,24 +1,26 @@
-import { Navigate, createBrowserRouter, createHashRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import { ErrorPage } from "../ui/views/ErrorPage";
-import { LoginPage } from "../auth/pages/LoginPage";
-import { CalendarPage } from "../calendar/pages/CalendarPage";
+import { CalendarRouter, routesCalendar } from "../calendar";
+import { AuthRouter, routesAuth } from "../auth";
 
 
 export const router = createBrowserRouter([
 
     {
-        path: "/calendar",
+        path: "/",
         errorElement: <ErrorPage />,
-        element: <CalendarPage />
+        element: <CalendarRouter />,
+        children: routesCalendar
     },
     {
         path: "/auth/*",
         errorElement: <ErrorPage />,
-        element: <LoginPage />,
+        element: <AuthRouter />,
+        children: routesAuth
     },
     {
         path: '/*',
         errorElement: <ErrorPage />,
-        element: <Navigate to='/calendar' />
+        element: <Navigate to='/' />
     },
 ])

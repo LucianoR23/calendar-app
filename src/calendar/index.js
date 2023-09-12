@@ -7,3 +7,7 @@ export * from './components/FabDelete'
 export * from './components/Navbar'
 
 export * from './pages/CalendarPage'
+
+export * from './routes/CalendarRouter'
+export * from './routes/routesCalendar'
+
